@@ -64,7 +64,7 @@ LinkedIn: https://www.linkedin.com/in/jo%C3%A3o-victor-bueno
 
 ---
 
-> Site online: [https://joaobueno13.github.io/Portifolio/](https://joaobueno13.github.io/Portifolio/)
+> Site online: [https://joaobueno13.github.io/Portfolio/](https://joaobueno13.github.io/Portfolio/)
 
 
 
