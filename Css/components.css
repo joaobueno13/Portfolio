@@ -55,6 +55,14 @@
   transform: translateY(-1px);
 }
 
+.lang-flag {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .lang-switcher {
@@ -455,12 +463,6 @@
   color: white;
 }
 
-.secondary-btn {
-  background-color: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
 .primary-btn:hover {
   background-color: var(--primary-hover-color);
   transform: translateY(-2px);
@@ -468,9 +470,18 @@
   color: white;
 }
 
+.secondary-btn {
+  background: transparent;
+  border: 2px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  border-radius: 30px !important;
+}
+
 .secondary-btn:hover {
-  background-color: rgba(0, 187, 255, 0.1);
+  background: rgba(0, 187, 255, 0.1) !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 187, 255, 0.25);
+  color: var(--primary-color) !important;
 }
 
 .resume-summary {

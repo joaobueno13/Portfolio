@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabButtons = document.querySelectorAll("[data-tab]");
     const tabContents = document.querySelectorAll(".tab-content");
     const underline = document.querySelector(".tab-underline");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -65,7 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Detecta clique em botões
     tabButtons.forEach(button => {
         button.addEventListener("click", () => {
-            activateTab(button.dataset.tab, true, true);
+            if (button.dataset.tab) {
+                activateTab(button.dataset.tab, true, true);
+            }
         });
     });
 

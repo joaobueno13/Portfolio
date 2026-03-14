@@ -1,4 +1,6 @@
-/* Títulos de Abas */
+/* =======================
+   Títulos de Abas
+======================= */
 .SB-title {
   margin-bottom: 3rem;
 }
@@ -18,7 +20,7 @@
 }
 
 /* =======================
-   Hero (Sobre Mim)
+   Hero — Layout
 ======================= */
 .about-container {
   display: flex;
@@ -30,22 +32,16 @@
   padding: 0 20px;
 }
 
-.about-left, .about-right {
+.about-left,
+.about-right {
   flex: 1;
   min-width: 300px;
   max-width: 500px;
 }
 
-.about-right {
-  text-align: left;
-}
-
-.about-right h1 {
-  color: var(--primary-color);
-  margin-top: 0;
-  font-size: 2.5rem;
-}
-
+/* =======================
+   Hero — Coluna Esquerda
+======================= */
 .hero-img-container {
   position: relative;
   width: var(--profile-pic-size);
@@ -58,7 +54,7 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  padding: 3px; /* Reduzi para melhorar o efeito */
+  padding: 3px;
   background: linear-gradient(
     45deg,
     var(--primary-color),
@@ -71,19 +67,15 @@
   box-shadow: 0 0 10px rgba(0, 187, 255, 0.5);
 }
 
-@keyframes gradient-border {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.profile-pic.animated-border {
-  animation: border-pulse 2s infinite;
-}
-
 .profile-pic.animated-border:hover {
   animation-duration: 1s;
   transform: scale(1.02);
+}
+
+@keyframes gradient-border {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Habilidades */
@@ -93,33 +85,6 @@
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .about-left,
-  .about-right {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-
-  .about-right {
-    text-align: center;
-  }
-
-  .hero-cta {
-    justify-content: center;
-  }
-
-  .skills-container {
-    display: none;
-  }
 }
 
 .skills-container h3 {
@@ -144,16 +109,6 @@
   transition: all 0.3s ease;
 }
 
-.skill-badge:hover {
-  background: var(--tag-hover-background);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 187, 255, 0.2);
-}
-
-.skill-badge:hover span {
-  color: var(--text-color);
-}
-
 .skill-badge img {
   width: 30px;
   height: 30px;
@@ -166,20 +121,32 @@
   transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
-    justify-content: center;
-  }
-  
-  .skill-badge {
-    width: 140px;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
+.skill-badge:hover {
+  background: var(--tag-hover-background);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 187, 255, 0.2);
 }
 
-/* História */
+/* Botão GitHub */
+.github-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* =======================
+   Hero — Coluna Direita
+======================= */
+.about-right {
+  text-align: left;
+}
+
+.about-right h1 {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-size: 2.5rem;
+}
+
 .subtitle {
   color: var(--text-color);
   font-size: 1.2rem;
@@ -193,59 +160,126 @@
   font-size: 1.1rem;
 }
 
-/* Hero CTA */
 .hero-cta {
   display: flex;
   gap: 1rem;
   justify-content: center;
 }
 
-.cta-button {
+/* =======================
+   Botões Hero — Projetos
+======================= */
+.btn-projetos {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 30px;
   font-size: 1.1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
   font-weight: bold;
-  letter-spacing: 1px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
   border: none;
-}
-
-/* Botão Primário (Projeto) */
-.cta-button.primary {
   background-color: var(--primary-color);
-  opacity: 1;
-  color: white;
+  color: #fff;
   box-shadow: 0 4px 15px rgba(0, 187, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
-/* Botão Secundário (Contato) */
-.cta-button.secondary {
-  background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-/* Efeitos Hover */
-.cta-button.primary:hover {
+.btn-projetos:hover {
   background-color: var(--primary-hover-color);
-  opacity: 1;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 187, 255, 0.4);
 }
 
-.cta-button.secondary:hover {
+.btn-projetos:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(0, 187, 255, 0.3);
+}
+
+/* =======================
+   Botões Hero — Contato
+======================= */
+.btn-contato {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-contato:hover {
   background: rgba(0, 187, 255, 0.1);
   transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 187, 255, 0.25);
 }
 
-/* Efeito ao clicar */
-.cta-button:active {
+.btn-contato:active {
   transform: translateY(1px);
-  box-shadow: 0 2px 10px rgba(0, 187, 255, 0.4);
+  box-shadow: 0 2px 10px rgba(0, 187, 255, 0.3);
 }
 
-/* Seção Projetos */
+/* =======================
+   Botões Hero — GitHub
+======================= */
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  /* Glassmorphism */
+  background: rgba(0, 187, 255, 0.08);
+  border: 1px solid rgba(0, 187, 255, 0.35);
+  color: var(--primary-color);
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 0 10px rgba(0, 187, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.github-btn:hover {
+  background: rgba(0, 187, 255, 0.15);
+  border-color: rgba(0, 187, 255, 0.7);
+  color: var(--primary-color);
+  text-decoration: none;
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 18px rgba(0, 187, 255, 0.35),
+    0 6px 20px rgba(0, 187, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.github-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 8px rgba(0, 187, 255, 0.2);
+}
+
+.github-btn-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(170deg) brightness(110%);
+}
+
+/* =======================
+   Seção Projetos
+======================= */
 .project {
   margin-bottom: 2rem;
   border: 1px solid var(--border-color);
@@ -254,7 +288,6 @@
   background: rgba(41, 41, 41, 0.3);
 }
 
-/* Estilo para o papel no projeto */
 .project-role {
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -294,7 +327,7 @@
 
 .video-slide {
   position: relative;
-  padding-top: 56.25%; /* Proporção 16:9 */
+  padding-top: 56.25%;
 }
 
 .video-slide iframe {
@@ -303,11 +336,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-/* Seções Adicionais */
-.contact {
-  margin-top: 3rem;
 }
 
 /* =======================
@@ -375,85 +403,88 @@
 }
 
 /* =======================
-   Mobile Responsivo
+   Responsivo — 768px
 ======================= */
-@media (max-width: 768px)
-{
-  main
-  {
+@media (max-width: 768px) {
+  main {
     padding: 1rem;
     max-width: 100%;
     overflow-x: hidden;
   }
-  
-  #hero
-  {
+
+  #hero {
     width: 100%;
     max-width: 100%;
     margin: 0;
     padding: 0;
   }
-  
-  .about-container
-  {
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
   }
-  
-  .about-left, 
-  .about-right
-  {
+
+  .about-left,
+  .about-right {
     max-width: 100%;
     width: 100%;
-    padding: 0 10px;
+    margin: 0 auto;
   }
-  
-  /* Garantir que o texto não ultrapasse a tela */
-  .bio-text p
-  {
+
+  .about-right {
+    text-align: center;
+  }
+
+  /* Oculta skills e GitHub no mobile */
+  .skills-container,
+  .github-cta {
+    display: none;
+  }
+
+  .hero-cta {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+.btn-projetos,
+.btn-contato {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    justify-content: center;
+  }
+
+  .skill-badge {
+    width: 140px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .bio-text p {
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
   }
-  
-  .hero-cta
-  {
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-  
-  .cta-button
-  {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-  }
-}
 
-/* Para telas muito pequenas */
-@media (max-width: 480px) {
-  .about-container
-  {
-    padding: 0 10px;
+  .resume-card {
+    padding: 1.5rem;
+    margin: 0 1rem;
   }
-  
-  .about-left, 
-  .about-right
-  {
-    padding: 0 5px;
-  }
-  
-  .hero-cta
-  {
+
+  .resume-actions {
     flex-direction: column;
     align-items: center;
-  }
-  
-  .cta-button
-  {
-    max-width: 100%;
   }
 }

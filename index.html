@@ -43,8 +43,14 @@
 
     <!-- Botão de idioma -->
     <div class="lang-switcher">
-      <button id="translate-pt" class="lang-btn" translate="no">🇧🇷 PT</button>
-      <button id="translate-en" class="lang-btn" translate="no">🇺🇸 EN</button>
+      <button id="translate-pt" class="lang-btn" translate="no">
+        <img src="./Icons/flag-br-icon.svg" alt="Bandeira do Brasil" class="lang-flag" />
+        PT
+      </button>
+      <button id="translate-en" class="lang-btn" translate="no">
+        <img src="./Icons/flag-us-icon.svg" alt="US Flag" class="lang-flag" />
+        EN
+      </button>
     </div>
   </header>
 
@@ -78,28 +84,35 @@
                 <span>Game Design</span>
               </div>
               <div class="skill-badge">
-                <img src="./Icons/github-icon.svg" alt="Github" />
-                <span>Github</span>
+                <img src="./Icons/git-icon.svg" alt="Git" />
+                <span>Git</span>
               </div>
             </div>
+            <!-- Botão GitHub -->
+            <div class="github-cta">
+              <a href="https://github.com/joaobueno13" target="_blank" rel="noopener noreferrer" class="github-btn">
+                <img src="./Icons/github-icon.svg" alt="" aria-hidden="true" class="github-btn-icon" />
+                Ver GitHub
+              </a>
+            </div>
+            <br>
           </div>
-          <br>
         </div>
 
         <!-- Coluna Direita -->
         <div class="about-right">
           <h1 translate="no">João Victor Bueno</h1>
-          <p class="subtitle">C# Developer | Game Developer</p>
+          <p class="subtitle">Game Developer | C# Developer</p>
 
           <div class="bio-text">
-            <p>Oi! Me chamo João Victor, sou desenvolvedor de jogos e apaixonado por transformar ideias malucas em games desde os 8 anos de idade. Hoje, com 19, estou no 4º semestre da faculdade de Jogos Digitais, já tendo concluído um curso técnico na área.</p>
+            <p>Oi! Me chamo João Victor, sou desenvolvedor de jogos e apaixonado por transformar ideias malucas em games desde os 8 anos de idade. Hoje, com 20, estou no 5º semestre da faculdade de Jogos Digitais, já tendo concluído um curso técnico na área.</p>
             <p>Amo fazer jogos desde criança e um dia espero poder mostrar e ensinar essa minha paixão a todos. Meu foco atual é em desenvolvimento com Unity e C#, criando experiências envolventes e inovadoras.</p>
           </div>
 
           <!-- CTA -->
           <div class="hero-cta">
-            <button class="cta-button primary tab-button" data-tab="projetos" aria-controls="projetos">Projetos</button>
-            <button class="cta-button secondary tab-button" data-tab="contato" aria-controls="contato">Contato</button>
+            <button class="btn-projetos" data-tab="projetos" aria-controls="projetos">Projetos</button>
+            <button class="btn-contato" data-tab="contato" aria-controls="contato">Contato</button>
           </div>
           
         </div>
@@ -131,7 +144,7 @@
           <button class="carousel-button next" aria-label="Próximo slide">❯</button>
         </div>
         <div class="tags">
-          <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Multiplayer</span><span class="tag">Terror</span><span class="tag">Cooperativo</span><span class="tag">3D</span>
+          <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Terror</span><span class="tag">Multiplayer</span><span class="tag">Cooperativo</span><span class="tag">3D</span>
         </div>
         <p>Facing Fear é um jogo cooperativo de terror que desafia os jogadores <br> a enfrentarem suas fobias enquanto exploram ambientes sombrios em <br> busca de chaves para escapar.</p>
         <p class="project-role"><strong>Meu papel:</strong> Programador principal, Game Designer</p>
@@ -153,7 +166,7 @@
           <button class="carousel-button next" aria-label="Próximo slide">❯</button>
         </div>
         <div class="tags">
-          <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Pixel Art</span><span class="tag">2D</span><span class="tag">Estilizado</span>
+          <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Plataforma</span><span class="tag">Pixel Art</span><span class="tag">2D</span><span class="tag">Estilizado</span>
         </div>
         <p>Bastard Rebels é um jogo de plataforma em pixel art ambientado <br> em um mundo distópico habitado por mutantes criados pela humanidade.</p>
         <p class="project-role"><strong>Meu papel:</strong> Desenvolvedor de mecânicas, Level Design</p>
@@ -175,7 +188,7 @@
           <button class="carousel-button next" aria-label="Próximo slide">❯</button>
         </div>
         <div class="tags">
-          <span class="tag">Construct</span><span class="tag">Pixelado</span><span class="tag">Beat 'Em Up</span><span class="tag">2D</span><span class="tag">Ação</span><span class="tag">Estilizado</span>
+          <span class="tag">Construct</span><span class="tag">Beat 'Em Up</span><span class="tag">Pixelado</span><span class="tag">2D</span><span class="tag">Ação</span><span class="tag">Estilizado</span>
         </div>
         <p>Leo Capybara: Train Rescue é um jogo de ação estilo Beat 'Em Up <br> onde os jogadores acompanham Leo em sua missão para defender <br> seu pai e os tripulantes de um trem ameaçado por vilões</p>
         <p class="project-role"><strong>Meu papel:</strong> Level Design, Programador de sistemas</p>
