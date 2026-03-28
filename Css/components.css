@@ -2,17 +2,24 @@
    Botões padrão
 ======================= */
 .download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--primary-color);
   color: #fff;
-  padding: 10px 20px;
+
+  padding: 10px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px; /* arredondado */
+
   font-size: 1rem;
+  font-weight: bold;
+
   cursor: pointer;
   text-align: center;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  transition: all 0.3s ease;
 }
 
 .download-btn:hover {
@@ -560,7 +567,7 @@ form {
   padding: 25px;
   background-color: #1c1c1c;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 187, 255, 0.15);
+  box-shadow: 0 0 20px rgba(92, 231, 92, 0.15);
 }
 
 form input,
@@ -589,25 +596,36 @@ form textarea {
 
 form .btn-enviar input[type="submit"] {
   width: 140px;
-  background-color: var(--primary-color);
+
+  background-color: #5ce75c; /* mesma cor do botão de contato */
   color: #fff;
   font-weight: bold;
   font-size: 16px;
-  padding: 10px 0;
-  border-radius: 12px;
+  padding: 10px 14px; /* ajuste para altura proporcional */
+  border-radius: 40px; /* igual ao botão de contato */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
   border: none;
+
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
 }
 
 form .btn-enviar input[type="submit"]:hover {
-  background-color: var(--primary-hover-color);
-  transform: translateY(-2px);
+  background-color: #36cc36; /* mesma cor hover */
+  transform: translateY(-4px) scale(1.03);
+
+  box-shadow: 
+    0 14px 26px -12px rgba(54, 204, 54, 0.5),
+    0 6px 10px -8px rgba(54, 204, 54, 0.3);
 }
 
 form .btn-enviar input[type="submit"]:active {
-  background-color: var(--primary-active-color);
-  transform: translateY(0);
+  transform: translateY(1px);
+  background-color: #36cc36; /* mantém hover ativo */
 }
 
 /* =======================
