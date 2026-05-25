@@ -106,6 +106,12 @@ main {
   transform: translateY(0);
 }
 
+/* Foco visível para navegação por teclado */
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
 /* Classes de Estado */
 .hidden {
   display: none;

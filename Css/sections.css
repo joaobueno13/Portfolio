@@ -200,7 +200,7 @@
 }
 
 /* =======================
-   Botões Hero — Contato
+   Botões Hero — Contato (outline)
 ======================= */
 .btn-contato {
   display: inline-flex;
@@ -213,11 +213,10 @@
   font-weight: bold;
 
   border-radius: 40px;
-  border: none;
+  border: 2px solid var(--primary-color);
 
-  color: #fff;
-
-  background-color: #5ce75c;
+  color: var(--primary-color);
+  background: transparent;
 
   letter-spacing: 0.5px;
   cursor: pointer;
@@ -226,13 +225,12 @@
 }
 
 .btn-contato:hover {
-  transform: translateY(-4px) scale(1.03);
-
-  background-color: #36cc36;
+  background: rgba(0, 187, 255, 0.1);
+  transform: translateY(-3px);
 
   box-shadow: 
-    0 14px 26px -12px rgba(54, 204, 54, 0.5),
-    0 6px 10px -8px rgba(54, 204, 54, 0.3);
+    0 12px 24px -10px rgba(var(--primary-color-rgb), 0.5),
+    0 4px 8px -6px rgba(var(--primary-color-rgb), 0.3);
 }
 
 .btn-contato:active {
@@ -331,101 +329,7 @@
   margin-bottom: 1rem;
 }
 
-/* Carousel */
-.carousel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
 
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.carousel-images img,
-.carousel-images .video-slide {
-  width: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-
-.video-slide {
-  position: relative;
-  padding-top: 56.25%;
-}
-
-.video-slide iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* =======================
-   Seção Currículo
-======================= */
-.resume-card {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: rgba(41, 41, 41, 0.3);
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.resume-description {
-  color: var(--text-color);
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.resume-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem 0;
-  flex-wrap: wrap;
-}
-
-.resume-summary {
-  text-align: left;
-  margin: 1.5rem auto;
-  padding: 1rem 1.5rem;
-  background: rgba(0, 187, 255, 0.05);
-  border-left: 4px solid var(--primary-color);
-  border-radius: 8px;
-  max-width: 600px;
-}
-
-.resume-summary h4 {
-  color: var(--primary-color);
-  margin-bottom: 0.8rem;
-}
-
-.resume-summary ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.resume-summary li {
-  margin-bottom: 0.5rem;
-  color: var(--text-color);
-}
-
-.secondary-btn {
-  background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-.secondary-btn:hover {
-  background: rgba(0, 187, 255, 0.1);
-  color: #fff;
-}
 
 /* =======================
    Responsivo — 768px
@@ -473,6 +377,11 @@
     display: none;
   }
 
+  .hero-img-container {
+    width: 200px;
+    height: 200px;
+  }
+
   .hero-cta {
     justify-content: center;
     flex-wrap: wrap;
@@ -503,13 +412,4 @@
     max-width: 100%;
   }
 
-  .resume-card {
-    padding: 1.5rem;
-    margin: 0 1rem;
-  }
-
-  .resume-actions {
-    flex-direction: column;
-    align-items: center;
-  }
 }

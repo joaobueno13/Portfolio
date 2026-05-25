@@ -1,42 +1,41 @@
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'pt',
-    includedLanguages: 'en,pt'
-  }, 'google_translate_element');
-}
+let currentLang = 'pt';
 
-function changeLanguage(lang) {
-  var select = document.querySelector("select.goog-te-combo");
+function updateLanguage(lang) {
+  currentLang = lang;
+  const t = translations[lang];
+  if (!t) return;
 
-  if (select) {
-    select.value = lang;
-    select.dispatchEvent(new Event("change"));
-  }
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) {
+      el.textContent = t[key];
+    }
+  });
 
-  updateActiveLang(lang);
-}
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (t[key] !== undefined) {
+      el.innerHTML = t[key].replace(/\n/g, '<br>');
+    }
+  });
 
-function updateActiveLang(lang) {
-  const ptBtn = document.getElementById("translate-pt");
-  const enBtn = document.getElementById("translate-en");
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    if (t[key] !== undefined) {
+      el.placeholder = t[key];
+    }
+  });
 
-  ptBtn.classList.remove("active");
-  enBtn.classList.remove("active");
+  document.getElementById('translate-pt').classList.toggle('active', lang === 'pt');
+  document.getElementById('translate-en').classList.toggle('active', lang === 'en');
 
-  if (lang === "pt") {
-    ptBtn.classList.add("active");
-  } else if (lang === "en") {
-    enBtn.classList.add("active");
-  }
+  localStorage.setItem('lang', lang);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const ptBtn = document.getElementById("translate-pt");
-  const enBtn = document.getElementById("translate-en");
+  const saved = localStorage.getItem('lang') || 'pt';
+  updateLanguage(saved);
 
-  if (ptBtn) ptBtn.addEventListener("click", () => changeLanguage("pt"));
-  if (enBtn) enBtn.addEventListener("click", () => changeLanguage("en"));
-
-  // idioma padrão
-  updateActiveLang("pt");
+  document.getElementById('translate-pt').addEventListener('click', () => updateLanguage('pt'));
+  document.getElementById('translate-en').addEventListener('click', () => updateLanguage('en'));
 });

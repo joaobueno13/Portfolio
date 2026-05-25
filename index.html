@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio João Victor Bueno</title>
+    <meta name="description" content="Portfólio de João Victor Bueno — Game Developer e C# Developer. Conheça meus projetos em Unity, C# e Construct." />
     <link rel="icon" href="./Icons/FavIcon.svg" type="image/x-icon" />
 
     <!-- CSS -->
@@ -12,10 +13,10 @@
     <link rel="stylesheet" href="./Css/sections.css" />
 
     <!-- Scripts -->
+    <script src="./Js/translations.js" defer></script>
     <script src="./Js/animationCon.js" defer></script>
     <script src="./Js/carousel.js" defer></script>
     <script src="./Js/tabNav.js" defer></script>
-    <script src="./Js/formSender.js" defer></script>
   </head>
 
   <body>
@@ -26,24 +27,24 @@
 
       <!-- Navegação desktop -->
       <nav class="tab-nav" role="tablist" aria-label="Navegação principal">
-        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="hero" data-tab="hero" id="hero-tab">Sobre Mim</button>
-        <button class="tab-button" role="tab" aria-selected="false" aria-controls="projetos" data-tab="projetos" id="projetos-tab">Projetos</button>
-        <button class="tab-button" role="tab" aria-selected="false" aria-controls="curriculo" data-tab="curriculo" id="curriculo-tab">Currículo</button>
-        <button class="tab-button" role="tab" aria-selected="false" aria-controls="contato" data-tab="contato" id="contato-tab">Contato</button>
+        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="hero" data-tab="hero" id="hero-tab" data-i18n="nav.about">Sobre Mim</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="projetos" data-tab="projetos" id="projetos-tab" data-i18n="nav.projects">Projetos</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="curriculo" data-tab="curriculo" id="curriculo-tab" data-i18n="nav.resume">Currículo</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="contato" data-tab="contato" id="contato-tab" data-i18n="nav.contact">Contato</button>
         <div class="tab-underline"></div>
       </nav>
 
       <!-- Menu mobile -->
       <div id="mobileMenu" class="mobile-menu" role="tablist" aria-label="Navegação mobile">
-        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="hero" data-tab="hero" id="hero-mobile-tab">Sobre Mim</button>
-        <button class="tab-button" role="tab" aria-selected="false" aria-controls="projetos" data-tab="projetos" id="projetos-mobile-tab">Projetos</button>
-        <button class="tab-button" role="tab" aria-selected="false" aria-controls="curriculo" data-tab="curriculo" id="curriculo-mobile-tab">Currículo</button>
-        <button class="tab-button" role="tab" aria-selected="false" aria-controls="contato" data-tab="contato" id="contato-mobile-tab">Contato</button>
+        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="hero" data-tab="hero" id="hero-mobile-tab" data-i18n="nav.about">Sobre Mim</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="projetos" data-tab="projetos" id="projetos-mobile-tab" data-i18n="nav.projects">Projetos</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="curriculo" data-tab="curriculo" id="curriculo-mobile-tab" data-i18n="nav.resume">Currículo</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="contato" data-tab="contato" id="contato-mobile-tab" data-i18n="nav.contact">Contato</button>
       </div>
 
       <!-- Botão de idioma -->
       <div class="lang-switcher">
-        <button id="translate-pt" class="lang-btn" translate="no">
+        <button id="translate-pt" class="lang-btn active" translate="no">
           <img src="./Icons/flag-br-icon.svg" alt="Bandeira do Brasil" class="lang-flag" />
           PT
         </button>
@@ -58,7 +59,7 @@
     <main>
       <!-- Seção Hero -->
       <section id="hero" class="tab-content active" role="tabpanel" aria-labelledby="hero-tab hero-mobile-tab">
-        <h2 class="text-center tab-title SB-title"><span>Sobre</span> <span>Mim</span></h2>
+        <h2 class="text-center tab-title SB-title"><span data-i18n="hero.title1">Sobre</span> <span data-i18n="hero.title2">Mim</span></h2>
 
         <div class="about-container">
           <!-- Coluna Esquerda -->
@@ -69,7 +70,7 @@
 
             <!-- Habilidades -->
             <div class="skills-container">
-              <h3>Minhas Habilidades</h3>
+              <h3 data-i18n="hero.skills">Minhas Habilidades</h3>
               <div class="skills-grid">
                 <div class="skill-badge">
                   <img src="./Icons/unity-icon.svg" alt="Unity" />
@@ -92,7 +93,7 @@
               <div class="github-cta">
                 <a href="https://github.com/joaobueno13" target="_blank" rel="noopener noreferrer" class="btn-github">
                   <img src="./Icons/github-icon.svg" alt="" aria-hidden="true" class="btn-github-icon" />
-                  Ver GitHub
+                  <span data-i18n="hero.github">Ver GitHub</span>
                 </a>
               </div>
               <br>
@@ -105,15 +106,14 @@
             <p class="subtitle">Game Developer | C# Developer</p>
 
             <div class="bio-text">
-              <p>Desenvolvedor de jogos com 3 títulos lançados, cobrindo gêneros como terror cooperativo, plataforma e beat 'em up. <br> <br> 
-                Formado com curso técnico pelo SENAC e atualmente no 5º semestre de Jogos Digitais na FATEC, com foco em Unity e C#. 
-                Um dos projetos que desenvolvi, Bastard Rebels, foi apresentado na Brasil Game Show 2023.</p>
+              <p data-i18n-html="hero.bio1">Desenvolvedor de jogos com 3 títulos lançados, cobrindo gêneros como terror cooperativo, plataforma e beat 'em up.</p>
+              <p data-i18n-html="hero.bio2">Formado com curso técnico pelo SENAC e atualmente no 5º semestre de Jogos Digitais na FATEC, com foco em Unity e C#. Um dos projetos que desenvolvi, Bastard Rebels, foi apresentado na Brasil Game Show 2023.</p>
             </div>
 
             <!-- CTA -->
             <div class="hero-cta">
-              <button class="btn-projetos" data-tab="projetos" aria-controls="projetos">Projetos</button>
-              <button class="btn-contato" data-tab="contato" aria-controls="contato">Contato</button>
+              <button class="btn-projetos" data-tab="projetos" aria-controls="projetos" data-i18n="hero.btn-projetos">Projetos</button>
+              <button class="btn-contato" data-tab="contato" aria-controls="contato" data-i18n="hero.btn-contato">Contato</button>
             </div>
             
           </div>
@@ -122,7 +122,7 @@
 
       <!-- Seção Projetos -->
       <section id="projetos" class="tab-content" role="tabpanel" aria-labelledby="projetos-tab projetos-mobile-tab" hidden>
-        <h2 class="text-center tab-title"><span>Meus</span> <span>Projetos</span></h2>
+        <h2 class="text-center tab-title"><span data-i18n="projects.title1">Meus</span> <span data-i18n="projects.title2">Projetos</span></h2>
         <br>
 
         <!-- Projeto: Facing Fear -->
@@ -131,15 +131,15 @@
           
           <div class="carousel">
             <div class="carousel-images">
-              <img src="./Images/facinfFearImg1.png" alt="Facing Fear - Tela do jogo mostrando ambiente sombrio">
+              <img src="./Images/facinfFearImg1.png" alt="Facing Fear - Tela do jogo mostrando ambiente sombrio" loading="lazy">
               <div class="video-slide">
                 <iframe src="https://www.youtube.com/embed/qt5UTe-cbPM?si=9qSaPvNoMM41vgRu"
                         title="Trailer Facing Fear no YouTube"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
               </div>
-              <img src="./Images/facinfFearImg2.png" alt="Facing Fear - Personagens explorando o ambiente">
-              <img src="./Images/facinfFearImg3.png" alt="Facing Fear - Tela de seleção de personagens">
+              <img src="./Images/facinfFearImg2.png" alt="Facing Fear - Personagens explorando o ambiente" loading="lazy">
+              <img src="./Images/facinfFearImg3.png" alt="Facing Fear - Tela de seleção de personagens" loading="lazy">
             </div>
             <button class="carousel-button prev" aria-label="Slide anterior">❮</button>
             <button class="carousel-button next" aria-label="Próximo slide">❯</button>
@@ -147,14 +147,14 @@
           <div class="tags">
             <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Terror</span><span class="tag">Multiplayer</span><span class="tag">Cooperativo</span><span class="tag">3D</span>
           </div>
-          <p>Facing Fear é um jogo cooperativo de terror para até 4 jogadores. <br> Ambientado em um manicômio abandonado, cada jogador enfrenta suas próprias fobias — <br> que ganharam vida e agora os caçam. Trabalhe em equipe para encontrar as chaves e escapar.</p>
-          <p class="project-role"><strong>Meu papel:</strong> Programador principal, Game Designer</p>
+          <p data-i18n-html="projects.facing-desc">Facing Fear é um jogo cooperativo de terror para até 4 jogadores. Ambientado em um manicômio abandonado, cada jogador enfrenta suas próprias fobias — que ganharam vida e agora os caçam. Trabalhe em equipe para encontrar as chaves e escapar.</p>
+          <p class="project-role"><strong data-i18n="projects.role-label">Meu papel:</strong> <span data-i18n="projects.facing-role">Programador principal, Game Designer</span></p>
           <br>
           <div class="project-actions">
-            <a href="https://garapagames.itch.io/facingfear" target="_blank" rel="noopener noreferrer"><button class="download-btn">Baixar no Itch.io</button></a>
+            <a href="https://garapagames.itch.io/facingfear" target="_blank" rel="noopener noreferrer"><button class="download-btn" data-i18n="projects.download">Baixar no Itch.io</button></a>
             <a href="https://github.com/joaobueno13/Facing-Fear" target="_blank" rel="noopener noreferrer" class="btn-github">
               <img src="./Icons/github-icon.svg" alt="" aria-hidden="true" class="btn-github-icon" />
-              Ver no GitHub
+              <span data-i18n="projects.github">Ver no GitHub</span>
             </a>
           </div>
         </div>
@@ -165,9 +165,9 @@
           
           <div class="carousel">
             <div class="carousel-images">
-              <img src="./Images/bastardRebelsImg1.png" alt="Bastard Rebels - Personagem principal em cena">
-              <img src="./Images/bastardRebelsImg2.png" alt="Bastard Rebels - Gameplay de combate">
-              <img src="./Images/bastardRebelsImg3.png" alt="Bastard Rebels - Cena do jogo mostrando ambiente">
+              <img src="./Images/bastardRebelsImg1.png" alt="Bastard Rebels - Personagem principal em cena" loading="lazy">
+              <img src="./Images/bastardRebelsImg2.png" alt="Bastard Rebels - Gameplay de combate" loading="lazy">
+              <img src="./Images/bastardRebelsImg3.png" alt="Bastard Rebels - Cena do jogo mostrando ambiente" loading="lazy">
             </div>
             <button class="carousel-button prev" aria-label="Slide anterior">❮</button>
             <button class="carousel-button next" aria-label="Próximo slide">❯</button>
@@ -175,14 +175,14 @@
           <div class="tags">
             <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Plataforma</span><span class="tag">Pixel Art</span><span class="tag">2D</span><span class="tag">Estilizado</span>
           </div>
-          <p>Bastard Rebels é um jogo de plataforma em pixel art com foco em narrativa. <br> Controle Sophie, uma mutante meio-aranha, em uma missão que mistura ação, <br> preconceito e pertencimento. Apresentado na BGS 2023.</p>
-          <p class="project-role"><strong>Meu papel:</strong> Desenvolvedor de mecânicas, Level Design</p>
+          <p data-i18n-html="projects.bastard-desc">Bastard Rebels é um jogo de plataforma em pixel art com foco em narrativa. Controle Sophie, uma mutante meio-aranha, em uma missão que mistura ação, preconceito e pertencimento. Apresentado na BGS 2023.</p>
+          <p class="project-role"><strong data-i18n="projects.role-label">Meu papel:</strong> <span data-i18n="projects.bastard-role">Desenvolvedor de mecânicas, Level Design</span></p>
           <br>
           <div class="project-actions">
-            <a href="https://garapagames.itch.io/bastard-rebels" target="_blank" rel="noopener noreferrer"><button class="download-btn">Baixar no Itch.io</button></a>
+            <a href="https://garapagames.itch.io/bastard-rebels" target="_blank" rel="noopener noreferrer"><button class="download-btn" data-i18n="projects.download">Baixar no Itch.io</button></a>
             <a href="https://github.com/joaobueno13/Bastard-Rebels" target="_blank" rel="noopener noreferrer" class="btn-github">
               <img src="./Icons/github-icon.svg" alt="" aria-hidden="true" class="btn-github-icon" />
-              Ver no GitHub
+              <span data-i18n="projects.github">Ver no GitHub</span>
             </a>
           </div>
         </div>
@@ -193,9 +193,9 @@
           
           <div class="carousel">
             <div class="carousel-images">
-              <img src="./Images/leoCapybaraimg1.png" alt="Leo Capybara - Tela de título">
-              <img src="./Images/leoCapybaraimg2.png" alt="Leo Capybara - Cena de gameplay">
-              <img src="./Images/leoCapybaraimg3.png" alt="Leo Capybara - Personagem principal em ação">
+              <img src="./Images/leoCapybaraimg1.png" alt="Leo Capybara - Tela de título" loading="lazy">
+              <img src="./Images/leoCapybaraimg2.png" alt="Leo Capybara - Cena de gameplay" loading="lazy">
+              <img src="./Images/leoCapybaraimg3.png" alt="Leo Capybara - Personagem principal em ação" loading="lazy">
             </div>
             <button class="carousel-button prev" aria-label="Slide anterior">❮</button>
             <button class="carousel-button next" aria-label="Próximo slide">❯</button>
@@ -203,14 +203,14 @@
           <div class="tags">
             <span class="tag">Construct</span><span class="tag">Beat 'Em Up</span><span class="tag">Pixelado</span><span class="tag">2D</span><span class="tag">Ação</span><span class="tag">Estilizado</span>
           </div>
-          <p>Leo Capybara: Train Rescue é um jogo de ação beat 'em up. <br> Ajude Leo a salvar seu pai e os passageiros de um trem sequestrado por agiotas. <br> Use socos, chutes, voadoras e um golpe especial para derrotar os capangas e o chefão Tiller.</p>
-          <p class="project-role"><strong>Meu papel:</strong> Level Design, Programador de sistemas</p>
+          <p data-i18n-html="projects.leo-desc">Leo Capybara: Train Rescue é um jogo de ação beat 'em up. Ajude Leo a salvar seu pai e os passageiros de um trem sequestrado por agiotas. Use socos, chutes, voadoras e um golpe especial para derrotar os capangas e o chefão Tiller.</p>
+          <p class="project-role"><strong data-i18n="projects.role-label">Meu papel:</strong> <span data-i18n="projects.leo-role">Level Design, Programador de sistemas</span></p>
           <br>
           <div class="project-actions">
-            <a href="https://joojinho13.itch.io/leo-capybara-trains-rescue" target="_blank" rel="noopener noreferrer"><button class="download-btn">Baixar no Itch.io</button></a>
+            <a href="https://joojinho13.itch.io/leo-capybara-trains-rescue" target="_blank" rel="noopener noreferrer"><button class="download-btn" data-i18n="projects.download">Baixar no Itch.io</button></a>
             <a href="https://github.com/joaobueno13/Leo_Capybara" target="_blank" rel="noopener noreferrer" class="btn-github">
               <img src="./Icons/github-icon.svg" alt="" aria-hidden="true" class="btn-github-icon" />
-              Ver no GitHub
+              <span data-i18n="projects.github">Ver no GitHub</span>
             </a>
           </div>
         </div>
@@ -218,12 +218,12 @@
 
       <!-- Seção Currículo -->
       <section id="curriculo" class="tab-content" role="tabpanel" aria-labelledby="curriculo-tab curriculo-mobile-tab" hidden>
-        <h2 class="text-center tab-title"><span>Meu</span> <span>Currículo</span></h2>
+        <h2 class="text-center tab-title"><span data-i18n="resume.title1">Meu</span> <span data-i18n="resume.title2">Currículo</span></h2>
         <br>
 
         <div class="resume-card">
-          <h3>Currículo - João Victor Bueno</h3>
-          <p class="resume-description">
+          <h3 data-i18n="resume.card-title">Currículo - João Victor Bueno</h3>
+          <p class="resume-description" data-i18n="resume.desc">
             Baixe meu currículo no idioma de sua preferência:
           </p>
 
@@ -239,12 +239,12 @@
 
           <!-- Resumo do currículo em HTML -->
           <div class="resume-summary">
-            <h4>Resumo do Currículo</h4>
+            <h4 data-i18n="resume.summary-title">Resumo do Currículo</h4>
             <ul>
-              <li><strong>Formação:</strong> <br> Tecnologia em Jogos Digitais - FATEC <br> Técnico em Jogos Digitais - SENAC</li>
-              <li><strong>Principais Habilidades:</strong> Unity, C#, Game Design, GitHub</li>
-              <li><strong>Projetos Relevantes:</strong> Facing Fear, Bastard Rebels, Leo Capybara</li>
-              <li><strong>Idiomas:</strong> Português (Nativo), Inglês (Intermediário)</li>
+              <li><strong data-i18n="resume.edu">Formação:</strong> <br> <span data-i18n="resume.edu-detail">Tecnologia em Jogos Digitais - FATEC<br>Técnico em Jogos Digitais - SENAC</span></li>
+              <li><strong data-i18n="resume.skills">Principais Habilidades:</strong> <span data-i18n="resume.skills-detail">Unity, C#, Game Design, GitHub</span></li>
+              <li><strong data-i18n="resume.projects">Projetos Relevantes:</strong> <span data-i18n="resume.projects-detail">Facing Fear, Bastard Rebels, Leo Capybara</span></li>
+              <li><strong data-i18n="resume.langs">Idiomas:</strong> <span data-i18n="resume.langs-detail">Português (Nativo), Inglês (Intermediário)</span></li>
             </ul>
           </div>
         </div>
@@ -252,30 +252,16 @@
 
       <!-- Seção Contato -->
       <section id="contato" class="tab-content" role="tabpanel" aria-labelledby="contato-tab contato-mobile-tab" hidden>
-        <h2 class="text-center tab-title"><span>Fale</span> <span>Comigo</span></h2>
+        <h2 class="text-center tab-title"><span data-i18n="contact.title1">Fale</span> <span data-i18n="contact.title2">Comigo</span></h2>
         
         <div class="contact-container">
-          <!-- Coluna Esquerda: Formulário -->
-          <div class="contact-form">
-            <form id="contactForm" action="https://formspree.io/f/xvgavgdz" method="POST">
-              <input type="text" name="name" placeholder="Nome completo:" required aria-label="Seu nome completo" />
-              <input type="email" name="email" placeholder="Email:" required aria-label="Seu email" />
-              <textarea name="message" placeholder="Mensagem:" maxlength="500" aria-label="Sua mensagem"></textarea>
-              <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="box">
-              <div class="btn-enviar"><input type="submit" value="Enviar" aria-label="Enviar mensagem"></div>
-            </form>
-          </div>
-          
-          <!-- Coluna Direita: Informações de Contato -->
           <div class="contact-info">
             <div class="contact-card">
               <div class="contact-icon email-icon">
                 <img src="./Icons/email-icon.svg" alt="Ícone de email">
               </div>
               <div class="contact-details">
-                <h3>Email</h3>
+                <h3 data-i18n="contact.email">Email</h3>
                 <a href="mailto:joaobueno1133@gmail.com" class="link">joaobueno1133@gmail.com</a>
               </div>
             </div>
@@ -285,17 +271,14 @@
                 <img src="./Icons/linkedin-icon.svg" alt="Ícone do LinkedIn">
               </div>
               <div class="contact-details">
-                <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/joão-victor-bueno/" target="_blank" rel="noopener noreferrer" class="link">Meu Perfil</a>
+                <h3 data-i18n="contact.linkedin">LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/joão-victor-bueno/" target="_blank" rel="noopener noreferrer" class="link" data-i18n="contact.profile">Meu Perfil</a>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <!-- Google Translate escondido -->
-    <div id="google_translate_element" style="display:none;"></div>
     <script src="./Js/translate.js" defer></script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
